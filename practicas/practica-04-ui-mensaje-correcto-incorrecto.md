@@ -59,7 +59,7 @@ Opcional (recomendado):
 Vamos a añadir un campo para enlazar el texto de UI y cambiar el mensaje.
 
 Sustituir el contenido del script por este:
-
+```csharp
 using UnityEngine;
 using TMPro;
 
@@ -88,7 +88,7 @@ public class ZonaCategoria : MonoBehaviour
         textoMensaje.gameObject.SetActive(true);
     }
 }
-
+```
 ---
 
 ## Enlazar el texto desde el Inspector
