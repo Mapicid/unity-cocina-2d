@@ -51,6 +51,28 @@ El Inspector debe mostrar:
 
 ---
 
+---
+
+### Configuración del sistema de Input (IMPORTANTE)
+
+Para que el arrastre con el ratón funcione correctamente, Unity debe tener
+activado el sistema de entrada antiguo y el nuevo.
+
+En Unity:
+
+1. Ir a `Edit → Project Settings…`
+2. Seleccionar `Player`
+3. Abrir `Other Settings`
+4. Buscar `Active Input Handling`
+5. Seleccionar:
+   - **Both**  
+     (Input Manager (Old) + Input System Package)
+
+Unity pedirá reiniciar el editor.
+Aceptar **Restart**.
+
+⚠️ Si no se realiza este paso, el objeto no se moverá aunque el script esté bien.
+
 ## ▶️ Probar el juego
 
 1. Pulsar el botón Play
