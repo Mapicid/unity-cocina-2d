@@ -120,7 +120,7 @@ Si entra un objeto con un tag incorrecto, en la Console aparece:
 
 ---
 
-## 🧠 Qué hemos aprendido
+## Qué hemos aprendido
 - Los Tags permiten identificar objetos como Zanahoria
 - La zona decide si el resultado es Correcto o Incorrecto
 - CompareTag es la forma correcta de comparar etiquetas
