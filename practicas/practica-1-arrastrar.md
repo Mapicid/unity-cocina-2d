@@ -1,6 +1,6 @@
 # 🧪 Práctica 1 — Arrastrar un objeto con el ratón
 
-## 🎯 Objetivo
+## Objetivo
 Aprender a:
 - Crear y usar un script en Unity
 - Entender qué es un evento de Unity
@@ -10,7 +10,7 @@ Al finalizar la práctica, el jugador podrá arrastrar una zanahoria por la pant
 
 ---
 
-## 🧠 Conceptos que se trabajan
+## Conceptos que se trabajan
 - GameObject
 - Componentes
 - Script como componente
@@ -19,7 +19,7 @@ Al finalizar la práctica, el jugador podrá arrastrar una zanahoria por la pant
 
 ---
 
-## 🛠️ Preparación de la escena
+## Preparación de la escena
 
 ### 1️⃣ Crear el GameObject
 En la escena debe existir un GameObject llamado Zanahoria.
@@ -39,7 +39,7 @@ Sin un BoxCollider2D, los eventos de ratón NO funcionan.
 
 ---
 
-## 🧩 Crear el script
+## Crear el script
 
 ### 3️⃣ Crear el archivo C#
 En Unity:
