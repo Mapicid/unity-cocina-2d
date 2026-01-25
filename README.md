@@ -10,7 +10,7 @@ Ejemplo:
 
 ---
 
-## 🧠 Conceptos IMPORTANTES de Unity (imprescindibles)
+## Conceptos IMPORTANTES de Unity (imprescindibles)
 
 ### 1️⃣ Scene (Escena)
 Es la **pantalla del juego**.  
@@ -26,7 +26,7 @@ Cualquier elemento del juego es un **GameObject**:
 - Una zona (Verduras, Carnes…)
 - Un texto en pantalla
 
-👉 En Unity **todo es un GameObject**.
+En Unity **todo es un GameObject**.
 
 ---
 
@@ -103,8 +103,26 @@ Ejemplos:
 Se usan para comprobar si un alimento es correcto o no.
 
 ---
+### 9️⃣ Eventos en Unity
+Unity usa métodos especiales que se ejecutan automáticamente cuando ocurre algo.
 
-## 🧩 Lógica del juego (resumen)
+Ejemplos:
+- `OnMouseDown()` → click sobre un objeto
+- `OnMouseDrag()` → arrastrar con el ratón
+- `OnTriggerEnter2D()` → entrar en una zona
+
+Estos métodos se escriben dentro de un script.
+Unity los llama automáticamente.
+
+### 🔍 Inspector
+Es la ventana de Unity donde se:
+- Añaden componentes a los GameObjects
+- Configuran sus valores
+- Asignan scripts, tags y referencias
+
+El Inspector muestra los componentes de un GameObject.
+
+## Lógica del juego (resumen)
 
 1. El jugador arrastra un alimento
 2. El alimento entra en una zona
@@ -115,6 +133,3 @@ Se usan para comprobar si un alimento es correcto o no.
    - ❌ Incorrecto
 
 ---
-
-## 📁 Estructura del repositorio
-
