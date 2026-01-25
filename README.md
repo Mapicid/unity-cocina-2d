@@ -39,9 +39,9 @@ Ejemplos de componentes:
 - `Sprite Renderer` → muestra una imagen
 - `BoxCollider2D` → detecta colisiones
 - `Script` → lógica del juego
+  
+Todos los GameObjects tienen Transform. Los demás componentes se añaden solo si el objeto los necesita. 
 
-Todos los GameObjects tienen Transform.
-Los demás componentes se añaden solo si el objeto los necesita.
 ---
 
 ### 4️⃣ Sprite
