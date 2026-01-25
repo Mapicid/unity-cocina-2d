@@ -82,15 +82,15 @@ public class ZonaCategoria : MonoBehaviour
 
 ## Configuración de la zona desde el Inspector
 
-### 6️⃣ Configurar la zona desde el Inspector
-Seleccionar el GameObject **ZonaVerduras** y comprobar:
+### 6️⃣ Configuración final correcta (resumen)
+### 🥕 Zanahoria
+- Tag: Verdura
 
-- Tiene BoxCollider2D
-- Tiene activada la opción Is Trigger
-- Tiene añadido el script ZonaCategoria. En esta práctica, el script DetectarEntrada de la práctica anterior ya no se utiliza
+### 🟩 ZonaVerduras
+- Tag: Untagged (no se utiliza para la comprobación)
+- Script: ZonaCategoria
+- Campo **Tag Correcto**: Verdura
 
-En el Inspector, dentro del componente ZonaCategoria:
-- En el campo **Tag Correcto**, escribir exactamente: Verdura
 
 ---
 
