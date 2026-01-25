@@ -29,15 +29,9 @@ Se crea un objeto Canvas en la Hierarchy.
 
 ### 2️⃣ Crear el texto del mensaje (TextMeshPro)
 Dentro del Canvas:
-1. Click derecho sobre Canvas en la Hierarchy
-2. UI → Text - TextMeshPro
-
-Si Unity pregunta por importar TMP Essentials:
-- Aceptar / Import
-
-La primera vez que se usa TextMeshPro, Unity tarda en importar.
-Renombrar el texto a:
-Mensaje
+Click derecho sobre Canvas en la Hierarchy
+UI → Text (Legacy)
+Renombrar el objeto a: Mensaje
 
 ---
 
@@ -62,12 +56,12 @@ Vamos a añadir un campo para enlazar el texto de UI y cambiar el mensaje.
 Sustituir el contenido del script por este:
 ```csharp
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class ZonaCategoria : MonoBehaviour
 {
     public string tagCorrecto;
-    public TextMeshProUGUI textoMensaje;
+    public Text textoMensaje;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -89,6 +83,7 @@ public class ZonaCategoria : MonoBehaviour
         textoMensaje.gameObject.SetActive(true);
     }
 }
+
 ```
 ---
 
@@ -122,10 +117,10 @@ Si fuera un objeto incorrecto:
 ---
 
 ## ❌ Errores comunes
-- No importar TextMeshPro Essentials
-- Olvidar añadir `using TMPro;`
-- No arrastrar el objeto Mensaje al campo textoMensaje
-- Tener el objeto Mensaje desactivado pero no activarlo desde el script
+- No arrastrar el objeto **Mensaje** al campo `textoMensaje`
+- Tener el objeto **Mensaje** desactivado y no activarlo desde el script
+- Escribir mal el tag esperado en la zona
+- No tener activado **Is Trigger** en el collider de la zona
 
 ---
 
@@ -137,13 +132,11 @@ Si fuera un objeto incorrecto:
 ### 🟩 ZonaVerduras
 - Tag: Untagged (no se utiliza para la comprobación)
 - Script: ZonaCategoria
-- Campo Tag Correcto: Verdura
-- Campo textoMensaje: Mensaje (TextMeshProUGUI)
+- Campo **Tag Correcto**: Verdura
+- Campo **textoMensaje**: Mensaje (Text)
 
 ---
 
-## Siguiente mejora (opcional)
+## 🚀 Siguiente mejora (opcional)
 - Ocultar el mensaje después de 2 segundos
 - Cambiar el color del texto (verde/rojo)
-- Añadir sonido de acierto/error
-
