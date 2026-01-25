@@ -26,9 +26,8 @@ En Unity:
 2. En el Inspector, arriba donde pone **Tag**
 3. Click en **Add Tag…**
 4. Crear los siguientes Tags:
-   - `Verdura`
-   - `Carne` (opcional, para ampliar luego)
-
+   - Añado el tag verdura. Respeta mayúsculas/minúsculas.
+  
 ---
 
 ### 2️⃣ Asignar Tag al alimento
