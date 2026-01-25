@@ -1,4 +1,4 @@
-# 🧪 Práctica 1 — Arrastrar un objeto con el ratón
+# 🧪 Práctica 1A — Arrastrar un objeto con el ratón
 
 ## Objetivo
 Aprender a:
