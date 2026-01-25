@@ -49,7 +49,7 @@ Selecciona Zanahoria y comprueba que tiene:
 ### 4️⃣ Crear el archivo C#
 En Unity:
 1. Ir a Assets/scripts
-2. Click derecho → Create → C# Script
+2. Click derecho → Create → C# Script (MonoBehaviour Script)
 3. Nombre del script: DetectarEntrada
 
 ---
