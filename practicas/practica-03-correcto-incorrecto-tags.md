@@ -128,8 +128,3 @@ Si entra un objeto con un tag incorrecto, en la Console aparece:
 
 ---
 
-## 🚀 Siguiente paso
-En la siguiente práctica se trabajará con:
-- Interfaz de usuario (UI)
-- Mostrar mensajes en pantalla
-- Feedback visual para el jugador
