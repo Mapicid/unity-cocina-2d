@@ -1,4 +1,4 @@
-# 🧪 Práctica 04 — Mensaje en pantalla (UI) Correcto / Incorrecto
+# Práctica 04 — Mensaje en pantalla (UI) Correcto / Incorrecto
 
 ## Objetivo
 Mostrar en pantalla un mensaje visual cuando un alimento se suelta en una zona:
