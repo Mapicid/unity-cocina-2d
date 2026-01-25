@@ -51,8 +51,6 @@ El Inspector debe mostrar:
 
 ---
 
----
-
 ### Configuración del sistema de Input (IMPORTANTE)
 
 Para que el arrastre con el ratón funcione correctamente, Unity debe tener
