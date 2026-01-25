@@ -35,6 +35,7 @@ Dentro del Canvas:
 Si Unity pregunta por importar TMP Essentials:
 - Aceptar / Import
 
+La primera vez que se usa TextMeshPro, Unity tarda en importar.
 Renombrar el texto a:
 Mensaje
 
