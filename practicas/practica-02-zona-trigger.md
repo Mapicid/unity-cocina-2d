@@ -24,7 +24,7 @@ En la ventana Hierarchy:
 2. 2D Object → Sprite → Square
 3. Renombrar el objeto a: ZonaVerduras
 4. Cambiar su tamaño desde Transform → Scale  
-   (por ejemplo X = 4, Y = 2) para que sea una zona grande
+   (por ejemplo Scale X = 4, Y = 2, Z=1, Position X=5, Y=3, Z=0) para que sea una zona grande
 
 ---
 
