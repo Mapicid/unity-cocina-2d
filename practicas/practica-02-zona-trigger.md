@@ -90,7 +90,23 @@ public class DetectarEntrada : MonoBehaviour
 ---
 
 ## ❌ Errores comunes
-- No activar Is Trigger en ZonaVerduras
-- No tener BoxCollider2D en Zanahoria
-- No asignar el script a la zona
-- Probar en la pestaña Scene en lugar de Game
+---
+
+Para que el evento `OnTriggerEnter2D` funcione correctamente, **no basta solo con Colliders**.
+
+⚠️ **Es obligatorio que al menos uno de los dos objetos tenga un Rigidbody2D**.
+
+En este proyecto se recomienda añadirlo al objeto **Zanahoria**.
+
+Pasos:
+1. Seleccionar el GameObject Zanahoria
+2. Add Component → Rigidbody2D
+3. Configurar:
+   - Body Type: Kinematic
+   - Gravity Scale: 0
+
+Sin Rigidbody2D, el método `OnTriggerEnter2D` **no se ejecuta** y no aparece ningún mensaje en la consola,
+aunque los colliders y el trigger estén bien configurados.
+
+---
+
