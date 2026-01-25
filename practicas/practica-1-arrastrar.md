@@ -50,9 +50,10 @@ En Unity:
 ---
 
 ### 4️⃣ Código del script
-
+```md
+Este script debe guardarse con el nombre ArrastrarObjeto.cs
 Abrir ArrastrarObjeto.cs y escribir el siguiente código:
-
+```csharp
 using UnityEngine;
 
 public class ArrastrarObjeto : MonoBehaviour
@@ -76,7 +77,7 @@ public class ArrastrarObjeto : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 }
-
+```
 ---
 
 ## 🔗 Asignar el script al GameObject
