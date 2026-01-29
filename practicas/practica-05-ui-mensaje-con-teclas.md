@@ -16,7 +16,7 @@ Aprender a detectar la pulsación de teclas y mostrar u ocultar un mensaje en pa
 
 ## Preparación de la escena
 
-1. Crear un proyecto en Unity (2D o 3D).
+1. Crear un proyecto en Unity (2D o 3D). Por ejmplo Unity_UI_Mensajes
 2. En la jerarquía:
    - `GameObject > UI > Canvas`
    - Dentro del Canvas: `UI > Text - TextMeshPro`
