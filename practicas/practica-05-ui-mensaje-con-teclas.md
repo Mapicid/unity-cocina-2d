@@ -89,4 +89,28 @@ public class ControlMensaje : MonoBehaviour
     }
 }
 ```
+## Enlazar el script y probar el funcionamiento
+
+### 1. Asignar el script al GameManager
+- En la ventana **Hierarchy**, seleccionar el objeto `GameManager`.
+- Arrastrar el script `ControlMensaje` desde la ventana **Project (Assets)** al **Inspector** del `GameManager`.
+- Comprobar que el componente `ControlMensaje` aparece en el Inspector.
+
+### 2. Enlazar el objeto del mensaje
+- Con el objeto `GameManager` seleccionado:
+  - En el Inspector, localizar el campo **Mensaje** del script `ControlMensaje`.
+  - Arrastrar el objeto **Text (TextMeshPro)** desde la jerarquía hasta el campo **Mensaje**.
+
+> Este paso es obligatorio para que el script funcione correctamente.
+
+### 3. Probar la práctica
+- Pulsar el botón **Play**.
+- Hacer clic dentro de la ventana **Game** para que Unity detecte el teclado.
+- Pulsar las siguientes teclas:
+  - **M** → el mensaje aparece en pantalla.
+  - **N** → el mensaje desaparece.
+
+### 4. Comprobaciones finales
+- Al iniciar el juego, el mensaje no debe verse.
+- No deben aparecer errores en la consola.
 
