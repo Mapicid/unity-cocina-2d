@@ -51,7 +51,22 @@ Aprender a detectar la pulsación de teclas y mostrar u ocultar un mensaje en pa
 
 ## Script
 
-Crear un script llamado `ControlMensaje.cs` y asignarlo al objeto `GameManager`.
+### 8. Crear el script en Assets
+1. En la ventana **Project** (Assets):
+   - (Opcional) Crear una carpeta llamada `Scripts`
+   - Entrar en `Assets/Scripts`
+
+2. Crear el script:
+- Situarse en la ventana **Project (Assets)**
+- Menú: **Assets > Create > MonoBehaviour Script**
+  (Si no funciona el botón derecho, usar el menú superior)
+- Nombre del script: `ControlMensaje`
+
+
+> Importante: el nombre del archivo y el nombre de la clase deben coincidir.
+
+### 9. Pegar el código
+Abrir `ControlMensaje.cs` y reemplazar el contenido por:
 
 ```csharp
 using UnityEngine;
