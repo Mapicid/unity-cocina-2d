@@ -32,7 +32,8 @@ Aprender a detectar la pulsación de teclas y mostrar u ocultar un mensaje en pa
 4. Dentro del Canvas, crear el texto del mensaje:
    - Seleccionar el objeto **Canvas**
    - Menú: **GameObject > UI > Text - TextMeshPro**
-   - Aceptar la importación de TextMeshPro si Unity lo solicita.
+   - Si Unity solicita importar TextMeshPro (Essentials o Extras), aceptar todas las opciones para continuar.
+
 
 5. Cambiar el texto del objeto TextMeshPro por:
    > Pulsa M para mostrar el mensaje  
