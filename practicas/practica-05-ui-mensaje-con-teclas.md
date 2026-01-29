@@ -16,15 +16,35 @@ Aprender a detectar la pulsación de teclas y mostrar u ocultar un mensaje en pa
 
 ## Preparación de la escena
 
-1. Crear un proyecto en Unity (2D o 3D). Por ejmplo Unity_UI_Mensajes
-2. En la jerarquía:
-   - `GameObject > UI > Canvas`
-   - Dentro del Canvas: `UI > Text - TextMeshPro`
-3. Cambiar el texto por:
+1. Crear un proyecto nuevo en Unity (2D o 3D).
+   - Nombre recomendado del proyecto: `Unity_UI_Mensajes`
+
+2. Nada más abrir el proyecto, guardar la escena:
+   - Menú: **File > Save As...**
+   - Carpeta: **Scenes**
+   - Nombre de la escena: `EscenaPrincipal`
+   - Guardar.
+
+3. En la jerarquía, crear el Canvas:
+   - Menú: **GameObject > UI > Canvas**
+   - Unity creará automáticamente un objeto `Canvas` y un `EventSystem`.
+
+4. Dentro del Canvas, crear el texto del mensaje:
+   - Seleccionar el objeto **Canvas**
+   - Menú: **GameObject > UI > Text - TextMeshPro**
+   - Aceptar la importación de TextMeshPro si Unity lo solicita.
+
+5. Cambiar el texto del objeto TextMeshPro por:
    > Pulsa M para mostrar el mensaje  
    > Pulsa N para ocultarlo
-4. **Desactivar el objeto del texto** desde el Inspector.
-5. Crear un **GameObject vacío** llamado `GameManager`.
+      
+6. Desactivar el objeto del texto:
+- Seleccionar el objeto **Text (TextMeshPro)** en la jerarquía
+- En el Inspector, desmarcar el checkbox de la parte superior
+
+7. Crear un GameObject vacío para el script:
+- Menú: **GameObject > Create Empty**
+- Cambiar el nombre a: `GameManager`
 
 ---
 
