@@ -51,5 +51,6 @@ public class ControlMensaje : MonoBehaviour
             mensaje.SetActive(false);
         }
     }
-```}
+}
+```
 
