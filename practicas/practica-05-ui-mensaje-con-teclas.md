@@ -40,8 +40,8 @@ Aprender a detectar la pulsación de teclas y mostrar u ocultar un mensaje en pa
    > Pulsa N para ocultarlo
       
 6. Desactivar el objeto del texto:
-- Seleccionar el objeto **Text (TextMeshPro)** en la jerarquía
-- En el Inspector, desmarcar el checkbox de la parte superior
+   - Seleccionar el objeto **Text (TextMeshPro)** en la jerarquía
+   - En el Inspector, desmarcar el checkbox de la parte superior
 
 7. Crear un GameObject vacío para el script:
 - Menú: **GameObject > Create Empty**
