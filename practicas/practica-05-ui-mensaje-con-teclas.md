@@ -102,6 +102,29 @@ public class ControlMensaje : MonoBehaviour
   - Arrastrar el objeto **Text (TextMeshPro)** desde la jerarquía hasta el campo **Mensaje**.
 
 > Este paso es obligatorio para que el script funcione correctamente.
+>
+## 📐 Ajuste de posición y tamaño del texto (muy importante)
+
+Para que el mensaje se vea correctamente en pantalla y no quede fuera del área visible, configurar el **Rect Transform** del objeto **Text (TextMeshPro)** con los siguientes valores:
+
+1. Seleccionar el objeto **Text (TextMeshPro)** dentro del `Canvas`.
+
+2. En el componente **Rect Transform**:
+   - **Anchors**: Centro (Middle Center)  
+     *(Seleccionar el preset central; opcionalmente usar Alt + Shift al hacer clic)*
+   - **Pos X**: `0`
+   - **Pos Y**: `0`
+   - **Width**: `500`
+   - **Height**: `120`
+
+3. En el componente **TextMeshPro – Text (UI)**:
+   - **Alignment**: Center / Center
+
+Con esta configuración, el texto aparecerá **centrado en pantalla** y se verá correctamente en cualquier resolución.
+
+> ⚠️ Nota:  
+> Si el texto existe pero no se ve correctamente en pantalla, revisa primero el **Rect Transform** (posición y anchors) antes de modificar el script.
+
 
 ### 3. Probar la práctica
 - Pulsar el botón **Play**.
