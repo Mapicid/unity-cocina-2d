@@ -40,6 +40,74 @@ En esta práctica crearás una mini demo en Unity donde podrás **arrastrar un o
 4. Arrastra el script al **Cube** para añadirlo como componente.
 
 ---
+## Script: Arrastrar y soltar en 3D
+
+Crea un script llamado **`DragAndDrop3D.cs`** dentro de la carpeta  
+`Assets/Scripts/` y copia el siguiente código:
+
+```csharp
+using UnityEngine;
+
+/// <summary>
+/// Permite arrastrar y soltar un objeto 3D con el ratón
+/// usando un plano horizontal.
+/// </summary>
+public class DragAndDrop3D : MonoBehaviour
+{
+    [Header("Ajustes")]
+    public float dragPlaneY = 0f;
+    public bool keepObjectY = true;
+
+    private Camera cam;
+    private bool dragging;
+    private Vector3 offset;
+    private Plane dragPlane;
+
+    private void Awake()
+    {
+        cam = Camera.main;
+    }
+
+    private void Start()
+    {
+        dragPlane = new Plane(Vector3.up, new Vector3(0f, dragPlaneY, 0f));
+    }
+
+    private void OnMouseDown()
+    {
+        dragging = true;
+
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (dragPlane.Raycast(ray, out float enter))
+        {
+            Vector3 hitPoint = ray.GetPoint(enter);
+            offset = transform.position - hitPoint;
+        }
+    }
+
+    private void OnMouseDrag()
+    {
+        if (!dragging) return;
+
+        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        if (dragPlane.Raycast(ray, out float enter))
+        {
+            Vector3 hitPoint = ray.GetPoint(enter);
+            Vector3 targetPos = hitPoint + offset;
+
+            if (keepObjectY)
+                targetPos.y = transform.position.y;
+
+            transform.position = targetPos;
+        }
+    }
+
+    private void OnMouseUp()
+    {
+        dragging = false;
+    }
+}
+```
 
 ### 3) Probar
 1. Pulsa **Play**.
