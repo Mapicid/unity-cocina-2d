@@ -49,64 +49,103 @@ Crea un script llamado **`DragAndDrop3D.cs`** dentro de la carpeta
 using UnityEngine;
 
 /// <summary>
-/// Permite arrastrar y soltar un objeto 3D con el ratón
-/// usando un plano horizontal.
+/// Script para arrastrar y soltar un objeto 3D con el ratón.
+/// El objeto se mueve sobre un plano horizontal.
 /// </summary>
 public class DragAndDrop3D : MonoBehaviour
 {
-    [Header("Ajustes")]
+    // ---------- VARIABLES EDITABLES DESDE EL INSPECTOR ----------
+
+    [Header("Ajustes del arrastre")]
+
+    // Altura (eje Y) del plano imaginario sobre el que se mueve el objeto
+    // Normalmente será 0 (el suelo)
     public float dragPlaneY = 0f;
+
+    // Si está activado, el objeto mantiene su altura Y al arrastrarlo
     public bool keepObjectY = true;
 
-    private Camera cam;
-    private bool dragging;
-    private Vector3 offset;
-    private Plane dragPlane;
+    // ---------- VARIABLES INTERNAS ----------
 
+    private Camera cam;        // Referencia a la cámara principal
+    private bool dragging;     // Indica si el objeto se está arrastrando
+    private Vector3 offset;    // Distancia entre el punto del ratón y el centro del objeto
+    private Plane dragPlane;   // Plano sobre el que se moverá el objeto
+
+    // Se ejecuta al iniciar el objeto
     private void Awake()
     {
+        // Obtenemos la cámara principal de la escena
         cam = Camera.main;
+
+        // Si no hay cámara principal, mostramos un error
+        if (cam == null)
+        {
+            Debug.LogError("No hay una cámara con la etiqueta MainCamera.");
+        }
     }
 
     private void Start()
     {
+        // Creamos un plano horizontal en la altura indicada (dragPlaneY)
+        // Vector3.up indica que el plano es horizontal
         dragPlane = new Plane(Vector3.up, new Vector3(0f, dragPlaneY, 0f));
     }
 
+    // Se ejecuta cuando hacemos clic sobre el objeto
     private void OnMouseDown()
     {
         dragging = true;
 
+        // Creamos un rayo desde la cámara hasta la posición del ratón
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        // Comprobamos dónde el rayo corta el plano
         if (dragPlane.Raycast(ray, out float enter))
         {
+            // Calculamos el punto de impacto en el plano
             Vector3 hitPoint = ray.GetPoint(enter);
+
+            // Guardamos la diferencia entre el objeto y el punto del ratón
+            // para que no "salte" al centro
             offset = transform.position - hitPoint;
         }
     }
 
+    // Se ejecuta mientras mantenemos pulsado el botón del ratón
     private void OnMouseDrag()
     {
         if (!dragging) return;
 
+        // Rayo desde la cámara al ratón
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+        // Calculamos la nueva posición sobre el plano
         if (dragPlane.Raycast(ray, out float enter))
         {
             Vector3 hitPoint = ray.GetPoint(enter);
-            Vector3 targetPos = hitPoint + offset;
 
+            // Nueva posición del objeto
+            Vector3 targetPosition = hitPoint + offset;
+
+            // Si queremos mantener la altura, fijamos el eje Y
             if (keepObjectY)
-                targetPos.y = transform.position.y;
+            {
+                targetPosition.y = transform.position.y;
+            }
 
-            transform.position = targetPos;
+            // Movemos el objeto
+            transform.position = targetPosition;
         }
     }
 
+    // Se ejecuta al soltar el botón del ratón
     private void OnMouseUp()
     {
         dragging = false;
     }
 }
+
 ```
 
 ### 3) Probar
@@ -123,8 +162,7 @@ public class DragAndDrop3D : MonoBehaviour
 - Haz que el objeto cambie de color mientras se arrastra.
 
 ---
+### Nota sobre la cámara
 
-## Entrega
-- Captura de pantalla o vídeo corto mostrando el arrastre.
-- Explicación breve (2–3 líneas) de cómo funciona el script.
-
+- **Perspective** → juegos 3D reales, profundidad, cambio visual de tamaño  
+- **Orthographic** → vista plana, tamaño constante, más simple
